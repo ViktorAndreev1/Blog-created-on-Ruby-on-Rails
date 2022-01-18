@@ -1,0 +1,9 @@
+<h4>Все опубликованные посты</h4>
+<% @post.each do |post| %>
+  <div class="alert alert-light">
+    <h5><%= post.title %></h5>
+    <p><%= post.body %></p>
+    <%= link_to "Подробнее", post_path(post), :class => 'btn btn-outline-primary' %>
+  </div>
+
+<% end %>
